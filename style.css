@@ -1659,55 +1659,78 @@ tr:hover td {
     transform: translateY(0);
 }
 
-/* ── Responsive ── */
+/* ── Responsive: Tablet ── */
 @media (max-width: 900px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .section-pad {
+        padding: 64px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
     .pillars-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
     .market-cards {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .fin-overview {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
     .ask-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .revenue-split {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
     .goose-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 16px;
     }
 
     .story-grid {
         grid-template-columns: 1fr;
+        gap: 32px;
     }
 
     .advantage-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .unit-econ-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
     }
 
     .site-highlights {
         grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
     }
 
     .protection-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .waterfall-chart {
@@ -1719,9 +1742,42 @@ tr:hover td {
         grid-template-columns: 90px 1fr 70px;
         gap: 10px;
     }
+
+    .story-text h3 {
+        font-size: 1.35rem;
+    }
+
+    .hero-sub {
+        font-size: 0.95rem;
+    }
 }
 
+/* ── Responsive: Phone ── */
 @media (max-width: 600px) {
+
+    /* Container & spacing */
+    .container {
+        padding: 0 16px;
+    }
+
+    .section-pad {
+        padding: 48px 0;
+    }
+
+    .section-header {
+        margin-bottom: 32px;
+    }
+
+    .section-desc {
+        font-size: 0.85rem;
+    }
+
+    .section-eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+    }
+
+    /* Nav */
     .nav-links {
         display: none;
     }
@@ -1730,68 +1786,612 @@ tr:hover td {
         display: flex;
     }
 
+    .nav-inner {
+        padding: 0 16px;
+        height: 56px;
+    }
+
+    .nav-brand {
+        font-size: 1.1rem;
+    }
+
+    .nav-cta {
+        padding: 6px 14px;
+        font-size: 0.7rem;
+    }
+
     .nav-links.open {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 64px;
+        top: 56px;
         left: 0;
         right: 0;
         background: rgba(10, 12, 16, 0.97);
         backdrop-filter: blur(20px);
-        padding: 20px 24px;
-        gap: 16px;
+        padding: 16px 20px;
+        gap: 14px;
         border-bottom: 1px solid var(--border-glass);
     }
 
+    /* Hero */
+    .hero {
+        min-height: 90vh;
+        padding-top: 56px;
+    }
+
+    .hero-eyebrow {
+        font-size: 0.6rem;
+        letter-spacing: 0.18em;
+        margin-bottom: 16px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.8rem, 8vw, 2.8rem);
+        margin-bottom: 14px;
+    }
+
+    .hero-sub {
+        font-size: 0.88rem;
+        margin-bottom: 28px;
+        max-width: 100%;
+        line-height: 1.6;
+    }
+
     .hero-stats {
-        gap: 20px;
+        gap: 12px;
         flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+
+    .hero-stats>div {
+        min-width: 42%;
+        text-align: center;
     }
 
     .hero-stat-value {
+        font-size: 1.5rem;
+    }
+
+    .hero-stat-label {
+        font-size: 0.6rem;
+        letter-spacing: 0.08em;
+    }
+
+    .hero-cta-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero-cta-row .btn-primary,
+    .hero-cta-row .btn-ghost {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 14px 24px;
+    }
+
+    /* Story */
+    .story-grid {
+        gap: 24px;
+    }
+
+    .story-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .story-text p {
+        font-size: 0.84rem;
+    }
+
+    .story-visual {
+        aspect-ratio: 16/9;
+    }
+
+    /* Pillars */
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .pillar-card {
+        padding: 24px 20px;
+        text-align: left;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .pillar-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .pillar-card h4 {
+        font-size: 0.88rem;
+    }
+
+    .pillar-card p {
+        font-size: 0.78rem;
+    }
+
+    /* Market */
+    .market-cards {
+        gap: 12px;
+    }
+
+    .market-card {
+        padding: 24px 20px;
+    }
+
+    .market-value {
+        font-size: 1.5rem;
+    }
+
+    .market-card h4 {
+        font-size: 0.85rem;
+    }
+
+    .market-card p {
+        font-size: 0.78rem;
+    }
+
+    /* Advantage / Competitive */
+    .advantage-card {
+        padding: 20px 16px;
+    }
+
+    .advantage-card h4 {
+        font-size: 0.82rem;
+    }
+
+    .advantage-card p {
+        font-size: 0.75rem;
+    }
+
+    /* Financial KPIs */
+    .fin-overview {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .fin-card {
+        padding: 20px 14px;
+    }
+
+    .fin-value {
+        font-size: 1.4rem;
+    }
+
+    .fin-label {
+        font-size: 0.68rem;
+    }
+
+    /* Inventory table */
+    .inventory-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -16px;
+        padding: 0 16px;
+        position: relative;
+    }
+
+    .inventory-table-wrap::after {
+        content: '← Scroll →';
+        display: block;
+        text-align: center;
+        font-size: 0.65rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 8px 0 0;
+    }
+
+    .inventory-table-wrap h3 {
+        font-size: 1.05rem;
+    }
+
+    table {
+        min-width: 700px;
+        font-size: 0.78rem;
+    }
+
+    th {
+        font-size: 0.68rem;
+        padding: 10px 12px;
+    }
+
+    td {
+        padding: 10px 12px;
+        font-size: 0.76rem;
+    }
+
+    /* Revenue split */
+    .revenue-split {
+        gap: 16px;
+    }
+
+    .revenue-box {
+        padding: 24px 18px;
+    }
+
+    .revenue-box h4 {
+        font-size: 0.9rem;
+    }
+
+    .rv-label {
+        font-size: 0.78rem;
+    }
+
+    .rv-value {
+        font-size: 0.82rem;
+    }
+
+    /* Charts */
+    .chart-section {
+        padding: 24px 16px;
+        border-radius: var(--radius-md);
+    }
+
+    .chart-title {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    /* Bar chart */
+    .bar-row {
+        grid-template-columns: 70px 1fr 55px;
+        gap: 8px;
+    }
+
+    .bar-label {
+        font-size: 0.68rem;
+    }
+
+    .bar-val {
+        font-size: 0.72rem;
+    }
+
+    .bar-track {
+        height: 22px;
+    }
+
+    /* Donut */
+    .donut-row {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .donut-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .donut-total {
+        font-size: 1.3rem;
+    }
+
+    .donut-sublabel {
+        font-size: 0.6rem;
+    }
+
+    .legend-item {
+        font-size: 0.82rem;
+    }
+
+    /* Capital Efficiency */
+    .capex-flow {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .capex-step {
+        padding: 18px 20px;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .capex-amount {
+        font-size: 1.3rem;
+    }
+
+    .capex-label {
+        font-size: 0.68rem;
+    }
+
+    .capex-arrow {
+        transform: rotate(90deg);
+        font-size: 1.2rem;
+    }
+
+    /* Unit Economics */
+    .unit-econ-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .unit-econ-card {
+        padding: 18px 14px;
+    }
+
+    .ue-value {
+        font-size: 1.3rem;
+    }
+
+    .ue-sublabel {
+        font-size: 0.65rem;
+    }
+
+    .ue-label {
+        font-size: 0.68rem;
+    }
+
+    .ue-desc {
+        font-size: 0.68rem;
+    }
+
+    /* Margin analysis */
+    .margin-label {
+        font-size: 0.75rem;
+    }
+
+    .margin-track {
+        height: 8px;
+    }
+
+    /* The Ask & Returns */
+    .ask-grid {
+        gap: 20px;
+    }
+
+    .ask-card {
+        padding: 24px 18px;
+    }
+
+    .ask-big-number {
+        font-size: 2rem;
+    }
+
+    .ask-big-label {
+        font-size: 0.72rem;
+    }
+
+    .ask-detail {
+        padding: 10px 0;
+    }
+
+    .ad-label {
+        font-size: 0.78rem;
+    }
+
+    .ad-value {
+        font-size: 0.82rem;
+    }
+
+    .waterfall {
+        gap: 8px;
+    }
+
+    .waterfall-step {
+        padding: 12px 8px;
+    }
+
+    .ws-num {
+        font-size: 0.9rem;
+    }
+
+    .ws-label {
+        font-size: 0.6rem;
+    }
+
+    /* Waterfall chart */
+    .waterfall-chart {
+        height: 180px;
+        gap: 6px;
+        padding: 16px 0;
+    }
+
+    .wf-bar-label {
+        font-size: 0.55rem;
+        top: -22px;
+    }
+
+    .wf-bar-title {
+        font-size: 0.58rem;
+        letter-spacing: 0.03em;
+    }
+
+    /* Downside protection */
+    .protection-card {
+        padding: 20px 16px;
+    }
+
+    .protection-header {
+        font-size: 0.72rem;
+    }
+
+    .protection-val {
         font-size: 1.6rem;
     }
 
-    .pillars-grid {
+    .protection-sub {
+        font-size: 0.72rem;
+    }
+
+    .protection-bar {
+        height: 24px;
+    }
+
+    .protection-bar-label {
+        font-size: 0.6rem;
+    }
+
+    .protection-ratio {
+        font-size: 0.78rem;
+    }
+
+    .p-badge {
+        font-size: 0.65rem;
+        padding: 5px 10px;
+    }
+
+    /* Golden Goose */
+    .golden-goose {
+        padding: 28px 18px;
+        border-radius: var(--radius-md);
+    }
+
+    .goose-grid {
+        gap: 14px;
+    }
+
+    .goose-item {
+        padding: 20px 16px;
+    }
+
+    .goose-val {
+        font-size: 1.5rem;
+    }
+
+    .goose-label {
+        font-size: 0.72rem;
+    }
+
+    /* Team */
+    .team-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .team-card {
+        padding: 24px 18px;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .team-avatar {
+        width: 44px;
+        height: 44px;
+        font-size: 0.8rem;
+        flex-shrink: 0;
+    }
+
+    .team-card h4 {
+        font-size: 0.9rem;
+    }
+
+    .team-role {
+        font-size: 0.68rem;
+    }
+
+    .team-card p {
+        font-size: 0.75rem;
+    }
+
+    /* Governance */
+    .governance-row {
+        gap: 8px;
+    }
+
+    .gov-badge {
+        font-size: 0.65rem;
+        padding: 6px 14px;
+    }
+
+    /* Roadmap */
+    .roadmap-phase {
+        padding: 24px 18px;
+    }
+
+    .roadmap-phase h4 {
+        font-size: 0.9rem;
+    }
+
+    .roadmap-phase ul li {
+        font-size: 0.78rem;
+        padding-left: 20px;
+    }
+
+    /* Site */
+    .site-highlights {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .site-card {
+        padding: 20px 14px;
+    }
+
+    .site-icon {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .site-card h4 {
+        font-size: 0.8rem;
+    }
+
+    .site-card p {
+        font-size: 0.7rem;
+    }
+
+    /* CTA */
+    .cta-box {
+        padding: 32px 20px;
+        border-radius: var(--radius-md);
+    }
+
+    .cta-box h2 {
+        font-size: 1.4rem;
+    }
+
+    .cta-box p {
+        font-size: 0.82rem;
+    }
+
+    .cta-form input,
+    .cta-form textarea {
+        padding: 12px 14px;
+        font-size: 0.84rem;
+    }
+
+    /* Footer */
+    .footer-links {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .footer-links a {
+        font-size: 0.68rem;
+    }
+}
+
+/* ── Responsive: Extra-Small ── */
+@media (max-width: 380px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-stats>div {
+        min-width: 46%;
+    }
+
+    .hero-stat-value {
+        font-size: 1.3rem;
     }
 
     .fin-overview {
         grid-template-columns: 1fr;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .waterfall {
-        flex-direction: column;
-    }
-
-    .section-pad {
-        padding: 56px 0;
-    }
-
-    .golden-goose {
-        padding: 32px 20px;
-    }
-
-    .ask-card {
-        padding: 28px 24px;
-    }
-
-    .cta-box {
-        padding: 36px 24px;
-    }
-
-    /* Table scroll */
-    .inventory-table-wrap {
-        overflow-x: auto;
-    }
-
-    table {
-        min-width: 800px;
     }
 
     .unit-econ-grid {
@@ -1802,33 +2402,15 @@ tr:hover td {
         grid-template-columns: 1fr;
     }
 
-    .capex-flow {
-        flex-direction: column;
+    .ask-big-number {
+        font-size: 1.7rem;
     }
 
-    .capex-arrow {
-        transform: rotate(90deg);
+    .goose-val {
+        font-size: 1.3rem;
     }
 
-    .waterfall-chart {
-        height: 180px;
-        gap: 8px;
-    }
-
-    .wf-bar-label {
-        font-size: 0.6rem;
-    }
-
-    .bar-row {
-        grid-template-columns: 70px 1fr 60px;
-        gap: 8px;
-    }
-
-    .bar-label {
-        font-size: 0.7rem;
-    }
-
-    .chart-section {
-        padding: 24px 16px;
+    .capex-amount {
+        font-size: 1.1rem;
     }
 }
