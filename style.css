@@ -657,6 +657,51 @@ tr:hover td {
     color: var(--gold);
 }
 
+/* Comparison Table */
+.comparison-table {
+    min-width: 600px;
+}
+
+.comparison-table th,
+.comparison-table td {
+    text-align: center;
+}
+
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.highlight-col {
+    background: rgba(212, 175, 55, 0.06) !important;
+    border-left: 2px solid rgba(212, 175, 55, 0.2);
+    border-right: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+thead .highlight-col {
+    color: var(--gold) !important;
+    font-weight: 700;
+}
+
+.tbl-check {
+    color: var(--emerald);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.tbl-x {
+    color: rgba(231, 76, 60, 0.6);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.tbl-partial {
+    color: #f39c12;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
 /* Revenue Breakdown */
 .revenue-split {
     display: grid;
