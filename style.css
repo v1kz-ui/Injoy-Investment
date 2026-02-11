@@ -1710,6 +1710,25 @@ thead .highlight-col {
     margin: 0 auto;
 }
 
+.faq-category {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.faq-category:last-child {
+    margin-bottom: 0;
+}
+
+.faq-category-title {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    margin-bottom: 4px;
+}
+
 .faq-item {
     border-bottom: 1px solid var(--border-glass);
 }
