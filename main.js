@@ -166,3 +166,17 @@ function handleSubmit(e) {
 
   return false;
 }
+
+// ── FAQ Accordion ──
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isActive = item.classList.contains('active');
+
+  // Close all other FAQ items
+  document.querySelectorAll('.faq-item.active').forEach(el => {
+    if (el !== item) el.classList.remove('active');
+  });
+
+  // Toggle the clicked item
+  item.classList.toggle('active', !isActive);
+}
