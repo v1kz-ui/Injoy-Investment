@@ -373,18 +373,25 @@
                 grid-template-columns: 1fr;
             }
 
-            table {
-                font-size: 0.75rem;
-            }
-
-            th,
-            td {
-                padding: 8px 10px;
+            .card {
+                padding: 18px 14px;
             }
 
             .card-val,
             .scenario-val {
                 font-size: 1.3rem;
+            }
+
+            .card-label {
+                font-size: 0.62rem;
+            }
+
+            .card-desc {
+                font-size: 0.7rem;
+            }
+
+            .deck-header {
+                padding: 32px 16px;
             }
 
             .deck-logo {
@@ -395,11 +402,94 @@
                 font-size: 1.2rem;
             }
 
+            .deck-subtitle {
+                font-size: 0.65rem;
+            }
+
+            .deck-section h2 {
+                font-size: 1.2rem;
+            }
+
+            .deck-section p {
+                font-size: 0.82rem;
+            }
+
+            .section-sub {
+                font-size: 0.65rem;
+            }
+
+            /* Table horizontal scroll */
+            .deck-section {
+                overflow-x: visible;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                font-size: 0.72rem;
+                white-space: nowrap;
+            }
+
+            thead,
+            tbody,
+            tr {
+                display: table;
+                width: 100%;
+                table-layout: auto;
+            }
+
+            table {
+                min-width: 520px;
+            }
+
+            th,
+            td {
+                padding: 8px 10px;
+                font-size: 0.72rem;
+            }
+
+            .note {
+                font-size: 0.76rem;
+                padding: 14px 16px;
+            }
+
+            .scenario {
+                padding: 18px 14px;
+            }
+
+            .scenario-title {
+                font-size: 0.65rem;
+            }
+
+            .scenario-detail {
+                font-size: 0.72rem;
+            }
+
             .print-btn {
                 bottom: 16px;
                 right: 16px;
                 padding: 12px 20px;
                 font-size: 0.75rem;
+            }
+
+            .back-link {
+                font-size: 0.72rem;
+                margin-bottom: 16px;
+            }
+
+            .confidential {
+                font-size: 0.62rem;
+                padding: 8px 14px;
+            }
+
+            .page-break {
+                padding-bottom: 28px;
+                margin-bottom: 28px;
+            }
+
+            .deck-footer p {
+                font-size: 0.62rem;
             }
         }
 
@@ -409,6 +499,41 @@
             .scenario-grid,
             .card-grid-4 {
                 grid-template-columns: 1fr;
+            }
+
+            .deck {
+                padding: 16px 12px;
+            }
+
+            .deck-header {
+                padding: 24px 12px;
+            }
+
+            .deck-logo {
+                font-size: 1.3rem;
+            }
+
+            .deck-tagline {
+                font-size: 1rem;
+            }
+
+            .deck-section h2 {
+                font-size: 1.05rem;
+            }
+
+            .card-val,
+            .scenario-val {
+                font-size: 1.15rem;
+            }
+
+            table {
+                min-width: 440px;
+                font-size: 0.68rem;
+            }
+
+            th,
+            td {
+                padding: 6px 8px;
             }
         }
 
